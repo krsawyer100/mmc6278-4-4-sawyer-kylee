@@ -15,7 +15,7 @@ CREATE TABLE albums (
 -- create an "artist_id" column that's an integer
   artist_id INT NOT NULL,
 -- create a "release_year" column that's an integer
-  release_year INT NOT NULL
+  release_year INT NOT NULL,
   FOREIGN KEY (artist_id)
     REFERENCES artists (id)
     ON DELETE CASCADE
@@ -30,7 +30,7 @@ CREATE TABLE songs (
 -- create an "artist_id" column that's an integer
   artist_id INT NOT NULL,
 -- create an "album_id" column that's an integer
-  album_id INT NOT NULL
+  album_id INT NOT NULL,
   FOREIGN KEY (artist_id)
     REFERENCES artists (id)
     ON DELETE CASCADE,
