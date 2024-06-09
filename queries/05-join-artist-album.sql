@@ -4,7 +4,7 @@
 SELECT
     artists.name AS "artist_name",
     albums.name AS "album_name",
-    albums.release_year AS "album_release_year"
+    albums.release_year AS "release_year"
 FROM artists
 INNER JOIN albums ON artists.id = albums.artist_id
 ORDER BY artists.name, albums.name;
